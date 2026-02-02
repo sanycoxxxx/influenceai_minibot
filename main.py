@@ -1,18 +1,12 @@
-import os
-import asyncio
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
+import asyncio
+import os
 
 TOKEN = os.getenv("BOT_TOKEN")
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("Текст 1\n\nВітаю! Це стартовий текст бота 👋")
-
-    await update.message.reply_text(
-        "Посилання 3:\n"
-        "https://t.me/example_channel\n"
-        "https://google.com"
-    )
+    await update.message.reply_text("Hello!")
 
 async def main():
     app = ApplicationBuilder().token(TOKEN).build()
@@ -22,6 +16,33 @@ async def main():
 if __name__ == "__main__":
     asyncio.run(main())
 
+
+
+
+# import os
+# import asyncio
+# from telegram import Update
+# from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
+
+# TOKEN = os.getenv("BOT_TOKEN")
+
+# async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     await update.message.reply_text("Текст 1\n\nВітаю! Це стартовий текст бота 👋")
+
+#     await update.message.reply_text(
+#         "Посилання 3:\n"
+#         "https://t.me/example_channel\n"
+#         "https://google.com"
+#     )
+
+# async def main():
+#     app = ApplicationBuilder().token(TOKEN).build()
+#     app.add_handler(CommandHandler("start", start))
+#     await app.run_polling()
+
+# if __name__ == "__main__":
+#     asyncio.run(main())
+# _________________________
 # import asyncio
 # import logging
 # import os
@@ -100,6 +121,7 @@ if __name__ == "__main__":
 
 # if __name__ == "__main__":
 #     main()
+
 
 
 
