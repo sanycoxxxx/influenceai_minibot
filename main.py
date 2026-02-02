@@ -10,7 +10,7 @@ from aiohttp import web
 TOKEN = "8212904329:AAEKt8Xs2quDZ5HsTyujUjxdfdI71zQIIUQ"
 
 WEBHOOK_PATH = "/webhook"
-WEBHOOK_URL = "https://ТВІЙ_RENDER_URL.onrender.com/webhook"
+WEBHOOK_URL = "https://influenceai-minibot.onrender.com/webhook"
 
 bot = Bot(token=TOKEN)
 dp = Dispatcher()
@@ -76,3 +76,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
