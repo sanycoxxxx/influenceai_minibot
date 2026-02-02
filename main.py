@@ -7,7 +7,7 @@ from aiogram.filters import CommandStart
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from aiohttp import web
 
-TOKEN = "8212904329:AAEKt8Xs2quDZ5HsTyujUjxdfdI71zQIIUQ"
+TOKEN = os.getenv("BOT_TOKEN")
 
 WEBHOOK_PATH = "/webhook"
 WEBHOOK_URL = "https://influenceai-minibot.onrender.com/webhook"
@@ -76,4 +76,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
