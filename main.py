@@ -1,13 +1,17 @@
-from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
+import os
+import asyncio
+from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 
 TOKEN = os.getenv("BOT_TOKEN")
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("Текст 1: Вітаю! Це демо-бот 👋")
+    await update.message.reply_text("Текст 1\n\nВітаю! Це стартовий текст бота 👋")
 
     await update.message.reply_text(
-        "Посилання 3:\nhttps://t.me/example_channel"
+        "Посилання 3:\n"
+        "https://t.me/example_channel\n"
+        "https://google.com"
     )
 
 async def main():
@@ -16,7 +20,6 @@ async def main():
     await app.run_polling()
 
 if __name__ == "__main__":
-    import asyncio
     asyncio.run(main())
 
 # import asyncio
@@ -97,6 +100,7 @@ if __name__ == "__main__":
 
 # if __name__ == "__main__":
 #     main()
+
 
 
 
